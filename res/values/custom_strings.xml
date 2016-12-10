@@ -81,4 +81,7 @@
     <string name="app_notification_sound_timeout_value_15_minutes">10 minutes</string>
     <string name="app_notification_sound_timeout_value_30_minutes">30 minutes</string>
 
+   <!-- Phone info shortcut -->
+    <string name="device_info_title">Phone info</string>
+
 </resources>
