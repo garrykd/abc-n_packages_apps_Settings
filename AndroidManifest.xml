@@ -2730,6 +2730,8 @@
                 android:value="com.abc.settings.AbcSettings" />
             <meta-data android:name="com.android.settings.summary"
                 android:resource="@string/abc_settings_summary" />
+            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                android:value="true" />
         </activity>
 
         <receiver android:name=".widget.SettingsAppWidgetProvider"
