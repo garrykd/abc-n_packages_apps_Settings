@@ -98,6 +98,13 @@
                 android:summary="@string/dashboard_columns_summary"
                 android:persistent="false" />
 
+        <com.abc.settings.preferences.SystemSettingSwitchPreference
+                android:key="dashboard_summary_double_lines"
+                android:title="@string/dashboard_summary_double_lines_title"
+                android:summaryOn="@string/dashboard_summary_double_lines_summary_on"
+                android:summaryOff="@string/dashboard_summary_double_lines_summary_off"
+                android:defaultValue="false" />
+
         <PreferenceScreen
                 android:key="font_size"
                 android:title="@string/title_font_size"
