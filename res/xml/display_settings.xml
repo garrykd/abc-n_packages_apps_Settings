@@ -89,6 +89,15 @@
                 android:title="@string/tap_to_wake"
                 android:summary="@string/tap_to_wake_summary" />
 
+        <ListPreference
+                android:key="dashboard_columns"
+                android:title="@string/dashboard_columns_title"
+                android:dialogTitle="@string/dashboard_columns_dialog_title"
+                android:entries="@array/dashboard_columns_entries"
+                android:entryValues="@array/dashboard_columns_values"
+                android:summary="@string/dashboard_columns_summary"
+                android:persistent="false" />
+
         <PreferenceScreen
                 android:key="font_size"
                 android:title="@string/title_font_size"
