@@ -17,6 +17,7 @@ package com.android.settings.dashboard;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
 import android.os.Bundle;
@@ -87,7 +88,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
     private Condition mExpandedCondition = null;
     private SuggestionParser mSuggestionParser;
 
-    private int mNumColumns = 1;
+    private int mNumColumns;
 
     public DashboardAdapter(Context context, SuggestionParser parser, Bundle savedInstanceState,
                 List<Condition> conditions) {
@@ -95,6 +96,9 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
         mCache = new IconCache(context);
         mSuggestionParser = parser;
         mConditions = conditions;
+
+        final Resources res = context.getResources();
+        mNumColumns = res.getInteger(R.integer.dashboard_num_columns);
 
         setHasStableIds(true);
 
@@ -110,13 +114,24 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
     }
 
     public List<Tile> getSuggestions() {
-        return mSuggestions;
+        if ((Settings.System.getInt(mContext.getContentResolver(),
+                    Settings.System.DISABLE_SUGGESTIONS, 1) == 1)) {
+             return mSuggestions;
+        } else {
+             return null;
+        }
     }
 
     public void setCategoriesAndSuggestions(List<DashboardCategory> categories,
             List<Tile> suggestions) {
-        mSuggestions = suggestions;
         mCategories = categories;
+
+        if ((Settings.System.getInt(mContext.getContentResolver(),
+                    Settings.System.DISABLE_SUGGESTIONS, 1) == 1)) {
+             mSuggestions = suggestions;
+        } else {
+             mSuggestions = null;
+        }
 
         TypedValue tintColorValue = new TypedValue();
         mContext.getResources().getValue(R.color.external_tile_icon_tint_color,
@@ -350,17 +365,39 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
                 && mSuggestions.size() > DEFAULT_SUGGESTION_COUNT);
     }
 
-    private void onBindTile(DashboardItemHolder holder, Tile tile) {
+    public void onBindTile(DashboardItemHolder holder, Tile tile) {
+        int portraitColumns = Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.DASHBOARD_PORTRAIT_COLUMNS, DashboardSummary.mNumColumns);
+
+        int landscapeColumns = Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.DASHBOARD_LANDSCAPE_COLUMNS, DashboardSummary.mNumColumns);
+
         holder.icon.setImageDrawable(mCache.getIcon(tile.icon));
         holder.title.setText(tile.title);
         if (!TextUtils.isEmpty(tile.summary)) {
-            holder.summary.setText(tile.summary);
-            holder.summary.setVisibility(View.VISIBLE);
-            if (Settings.System.getInt(mContext.getContentResolver(),
-                    Settings.System.DASHBOARD_SUMMARY_DOUBLE_LINES, 0) == 1) {
-                holder.summary.setSingleLine(false);
+           if ((Settings.System.getInt(mContext.getContentResolver(),
+                    Settings.System.REMOVE_TILE_SUMMARY, 1) == 1)) {
+                holder.summary.setText(tile.summary);
+                holder.summary.setVisibility(View.VISIBLE);
+                if (portraitColumns == 1) {
+                    holder.summary.setSingleLine(true);
+                } else if (portraitColumns == 2) {
+                    holder.summary.setSingleLine(false);
+                } else if (portraitColumns == 3) {
+                    holder.summary.setSingleLine(false);
+                } else if (landscapeColumns == 1) {
+                    holder.summary.setSingleLine(true);
+                } else if (landscapeColumns == 2) {
+                    holder.summary.setSingleLine(false);
+                } else if (landscapeColumns == 3) {
+                    holder.summary.setSingleLine(false);
+                } else if (landscapeColumns == 4) {
+                    holder.summary.setSingleLine(false);
+                } else if (landscapeColumns == 5) {
+                    holder.summary.setSingleLine(false);
+                }
             } else {
-                holder.summary.setSingleLine(true);
+                holder.summary.setVisibility(View.GONE);
             }
         } else {
             holder.summary.setVisibility(View.GONE);
