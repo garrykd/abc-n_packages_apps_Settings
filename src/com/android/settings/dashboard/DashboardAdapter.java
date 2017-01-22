@@ -114,24 +114,14 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
     }
 
     public List<Tile> getSuggestions() {
-        if ((Settings.System.getInt(mContext.getContentResolver(),
-                    Settings.System.DISABLE_SUGGESTIONS, 1) == 1)) {
-             return mSuggestions;
-        } else {
-             return null;
-        }
+        return null;
     }
 
     public void setCategoriesAndSuggestions(List<DashboardCategory> categories,
             List<Tile> suggestions) {
         mCategories = categories;
 
-        if ((Settings.System.getInt(mContext.getContentResolver(),
-                    Settings.System.DISABLE_SUGGESTIONS, 1) == 1)) {
-             mSuggestions = suggestions;
-        } else {
-             mSuggestions = null;
-        }
+        mSuggestions = null;
 
         TypedValue tintColorValue = new TypedValue();
         mContext.getResources().getValue(R.color.external_tile_icon_tint_color,
