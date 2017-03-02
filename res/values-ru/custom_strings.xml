@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2016 The Pure Nexus Project
+     Copyright (C) 2016 Flash ROM
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Dashboard -->
+    <string name="header_category_custom">Управление прошивкой</string>
+    <string name="abc_settings_title">Настройки ABC</string>
+    <string name="abc_settings_summary">Пользовательские настройки прошивки</string>
+
+    <!-- Local (desktop) backup password menu title [CHAR LIMIT=25] -->
+    <string name="local_backup_password_title">Desktop backup password</string>
+
+    <!-- Dev Options Enabled by Default -->
+    <string name="show_dev_already_enabled">No Need, Development settings are enabled by default.</string>
+    <!-- ADB debugging notifications -->
+    <string name="enable_adb_custom">Android debugging</string>
+    <string name="enable_adb_summary_custom">Enable the Android Debug Bridge (adb) interface</string>
+    <string name="adb_notify">Уведомление об отладке</string>
+    <string name="adb_notify_summary">Показывать уведомление о включенном режиме отладки по USB или по сети</string>
+    <string name="adb_over_network">Отладка по сети</string>
+    <string name="adb_over_network_summary">Включить режим отладки через сетевые интерфейсы (Wi-Fi и USB-сети). Отладка отключается при перезагрузке устройства</string>
+    <string name="adb_over_network_warning">ВНИМАНИЕ: когда включена отладка по сети, устройство открыто для неконтролируемого доступа из всех подключенных сетей!\n\nИспользуйте эту функцию только при подключении к доверенным сетям.\n\nДействительно включить эту функцию?</string>
+    <!-- Local (desktop) backup password menu title [CHAR LIMIT=25] -->
+    <string name="local_backup_password_title">Desktop backup password</string>
+
+    <!-- ROM version -->
+    <string name="rom_version">Версия ABC</string>
+    <string name="rom_version_default">Неизвестно</string>
+    <!-- Vendor version -->
+    <string name="vendor_version">Версия Vendor</string>
+    <string name="vendor_version_default">Неизвестно</string>
+    <!-- Model Name -->
+    <string name="model_name">Имя модели</string>
+
+    <!-- Gesture Settings -->
+    <!-- Summary text for double twist for camera mode  [CHAR LIMIT=160]-->
+    <string name="double_twist_for_camera_mode_summary_pn">Для смены режима селфи и обратно в Google Camera, дважды вращайте телефон, находясь в приложении</string>
+
+    <!-- Increasing ring tone volume -->
+    <string name="increasing_ring_volume_option_title">Increasing ring volume</string>
+    <string name="increasing_ring_min_volume_title">Start volume</string>
+    <string name="increasing_ring_ramp_up_time_title">Ramp-up time</string>
+
+    <!-- Linked / unlinked notification volume -->
+    <string name="link_volume_option_title">Связать громкости звонка и уведомлений</string>
+    <string name="notification_volume_option_title">Громкость уведомлений</string>
+    <string name="ring_notification_volume_option_title">Громкость звонка и уведомлений</string>
+
+    <!-- Volume settings - Volume adjustment sound -->
+    <string name="volume_adjust_sounds_title">Volume adjustment sounds</string>
+
+    <!-- Category title for Charging sounds -->
+    <string name="power_notifications_category_title">Charging sounds</string>
+    <!-- Sound settings, Charging sounds enable/disable, setting check box label -->
+    <string name="power_notifications_enable_title">Enable</string>
+    <string name="power_notifications_enable_summary">Play a sound when connecting or disconnecting the charger</string>
+    <!-- Sound settings, Charging sounds vibrate enable/disable, setting check box label -->
+    <string name="power_notifications_vibrate_title">Vibrate</string>
+    <!-- Sound settings, Charging sounds ringtone selection, preference label -->
+    <string name="power_notifications_ringtone_title">Notification sound</string>
+    <!-- Sound settings, charging sounds label for ringtone == none -->
+    <string name="power_notifications_ringtone_silent">Silent</string>
+
+    <!-- Notification sound timeout -->
+    <string name="app_notification_sound_timeout_title">Минимальный интервал между уведомлениями</string>
+    <string name="app_notification_sound_timeout_summary_template">Использовать звук или вибрацию один раз в <xliff:g id="duration">%1$s</xliff:g></string>
+    <string name="app_notification_sound_timeout_value_none">без ограничений</string>
+    <string name="app_notification_sound_timeout_value_10_seconds">10 секунд</string>
+    <string name="app_notification_sound_timeout_value_30_seconds">30 секунд</string>
+    <string name="app_notification_sound_timeout_value_1_minute">1 минуту</string>
+    <string name="app_notification_sound_timeout_value_5_minutes">5 минут</string>
+    <string name="app_notification_sound_timeout_value_15_minutes">10 минут</string>
+    <string name="app_notification_sound_timeout_value_30_minutes">30 минут</string>
+
+    <!-- Navigation -->
+    <string name="navigation_category">Панель навигации</string>
+
+    <!-- Phone info shortcut -->
+    <string name="device_info_title">Информация о телефоне</string>
+
+    <!-- Advanced night mode brightness -->
+    <string name="night_brightness_category">Яркость</string>
+    <string name="night_brightness_value_title">Яркость в ночном режиме</string>
+    <string name="night_brightness_text">При включении ночного режима изменяется яркость экрана. По умолчанию яркость - низкая</string>
+    <string name="night_bright_disabled">Выключено</string>
+    <string name="night_bright_low">Минимальная</string>
+    <string name="night_bright_medium">Средняя</string>
+    <string name="night_bright_min">Низкая</string>
+
+    <!-- Dashboard options -->
+    <string name="dashboard_category">Опции главного меню</string>
+    <string name="remove_tile_summaries_title">Подсказки в главном меню</string>
+    <string name="remove_tile_summaries_summary_enabled">Подсказки в главном меню включены</string>
+    <string name="remove_tile_summaries_summary_disabled">Подсказки в главном меню выключены</string>
+    <string name="dashboard_columns_portrait_title">Количество столбцов (в портретном режиме)</string>
+    <string name="dashboard_columns_landscape_title">Количество столбцов (в альбомном режиме)</string>
+</resources>
