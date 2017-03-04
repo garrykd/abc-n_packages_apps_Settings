@@ -21,20 +21,20 @@
     <string name="abc_settings_summary">Пользовательские настройки прошивки</string>
 
     <!-- Local (desktop) backup password menu title [CHAR LIMIT=25] -->
-    <string name="local_backup_password_title">Desktop backup password</string>
+    <string name="local_backup_password_title">Пароль для резервного копирования</string>
 
     <!-- Dev Options Enabled by Default -->
-    <string name="show_dev_already_enabled">No Need, Development settings are enabled by default.</string>
+    <string name="show_dev_already_enabled">Не требуется, настройки \"Для разработчиков\" включены по умолчанию.</string>
     <!-- ADB debugging notifications -->
-    <string name="enable_adb_custom">Android debugging</string>
-    <string name="enable_adb_summary_custom">Enable the Android Debug Bridge (adb) interface</string>
+    <string name="enable_adb_custom">Отладка по USB</string>
+    <string name="enable_adb_summary_custom">Включить отладку по USB</string>
     <string name="adb_notify">Уведомление об отладке</string>
     <string name="adb_notify_summary">Показывать уведомление о включенном режиме отладки по USB или по сети</string>
     <string name="adb_over_network">Отладка по сети</string>
     <string name="adb_over_network_summary">Включить режим отладки через сетевые интерфейсы (Wi-Fi и USB-сети). Отладка отключается при перезагрузке устройства</string>
     <string name="adb_over_network_warning">ВНИМАНИЕ: когда включена отладка по сети, устройство открыто для неконтролируемого доступа из всех подключенных сетей!\n\nИспользуйте эту функцию только при подключении к доверенным сетям.\n\nДействительно включить эту функцию?</string>
     <!-- Local (desktop) backup password menu title [CHAR LIMIT=25] -->
-    <string name="local_backup_password_title">Desktop backup password</string>
+    <string name="local_backup_password_title">Пароль для резервного копирования</string>
 
     <!-- ROM version -->
     <string name="rom_version">Версия ABC</string>
@@ -50,9 +50,9 @@
     <string name="double_twist_for_camera_mode_summary_pn">Для смены режима селфи и обратно в Google Camera, дважды вращайте телефон, находясь в приложении</string>
 
     <!-- Increasing ring tone volume -->
-    <string name="increasing_ring_volume_option_title">Increasing ring volume</string>
-    <string name="increasing_ring_min_volume_title">Start volume</string>
-    <string name="increasing_ring_ramp_up_time_title">Ramp-up time</string>
+    <string name="increasing_ring_volume_option_title">Возрастающая громкость звонка</string>
+    <string name="increasing_ring_min_volume_title">Начальная громкость</string>
+    <string name="increasing_ring_ramp_up_time_title">Время увеличения</string>
 
     <!-- Linked / unlinked notification volume -->
     <string name="link_volume_option_title">Связать громкости звонка и уведомлений</string>
@@ -60,19 +60,19 @@
     <string name="ring_notification_volume_option_title">Громкость звонка и уведомлений</string>
 
     <!-- Volume settings - Volume adjustment sound -->
-    <string name="volume_adjust_sounds_title">Volume adjustment sounds</string>
+    <string name="volume_adjust_sounds_title">Звук при регулировке громкости</string>
 
     <!-- Category title for Charging sounds -->
-    <string name="power_notifications_category_title">Charging sounds</string>
+    <string name="power_notifications_category_title">Звуки зарядки</string>
     <!-- Sound settings, Charging sounds enable/disable, setting check box label -->
-    <string name="power_notifications_enable_title">Enable</string>
-    <string name="power_notifications_enable_summary">Play a sound when connecting or disconnecting the charger</string>
+    <string name="power_notifications_enable_title">Включить</string>
+    <string name="power_notifications_enable_summary">Воспроизводить звук при подключении или отключении зарядного устройства</string>
     <!-- Sound settings, Charging sounds vibrate enable/disable, setting check box label -->
-    <string name="power_notifications_vibrate_title">Vibrate</string>
+    <string name="power_notifications_vibrate_title">Вибрация</string>
     <!-- Sound settings, Charging sounds ringtone selection, preference label -->
-    <string name="power_notifications_ringtone_title">Notification sound</string>
+    <string name="power_notifications_ringtone_title">Звук уведомления</string>
     <!-- Sound settings, charging sounds label for ringtone == none -->
-    <string name="power_notifications_ringtone_silent">Silent</string>
+    <string name="power_notifications_ringtone_silent">Беззвучный</string>
 
     <!-- Notification sound timeout -->
     <string name="app_notification_sound_timeout_title">Минимальный интервал между уведомлениями</string>
