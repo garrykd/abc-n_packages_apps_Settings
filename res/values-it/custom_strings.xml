@@ -19,4 +19,6 @@
     <string name="header_category_custom">Controllo ROM</string>
     <string name="abc_settings_title">Impostazioni ABC</string>
     <string name="abc_settings_summary">Configurazione avanzata ROM</string>
+
+    <string name="background_processes_settings_title">Processi in background</string>
 </resources>
